@@ -1,0 +1,15 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+  name: .
+packageMetadata:
+  shortDescription: sample description
+openAPI:
+  definitions:
+    io.k8s.cli.setters.namespace_setter:
+      description: Set this before apply
+      x-k8s-cli:
+        setter:
+          name: namespace_setter
+          value: default
+          required: true

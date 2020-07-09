@@ -1,0 +1,9 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: demo # {"$kpt-set":"teamname_setter"}
+  namespace: default # {"$kpt-set":"namespace_setter"}
+spec:
+  backend:
+    serviceName: demo # {"$kpt-set":"teamname_setter"}
+    servicePort: 80
